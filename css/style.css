@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap');
+
+
+:root{
+    --color1: #23c698;
+    --color2: #023047;
+    --color3: #070917;
+    --color4: #e8f7fb;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+h1, h2, h3{
+    margin-top: 0;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+}
+
+.title, h2{
+    position: relative;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.title::after{
+    position: absolute;
+    content: "";
+    top: 120%;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background-color: var(--color2);
+}
+
+.vh-100{
+    min-height: 100vh;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    gap: 3rem;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+
+
+/* HEADER START */
+.header{
+    background: linear-gradient(#000000b3, #00000080), url(../imgs/main-hero.jpeg) center/cover no-repeat fixed;
+    color: var(--color4);
+    justify-content: start;
+    align-items: end;
+}
+
+.header .container{
+    width: 100%;
+}
+
+.header .content{
+    padding-bottom: 4rem;
+}
+.header .content h1{
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.header .content h3{
+    font-weight: normal;
+    font-size: 2rem;
+    color: #dcdcdc;
+}
+
+
+.social_links{
+    display: flex;
+    list-style: none;
+}
+.social_links li{
+    transition: all .3s;
+}
+.social_links a{
+    padding: .5rem 1rem;
+    margin-right: 1.5rem;
+    background: #fff;
+    color: var(--color3);
+    border-radius: .5rem;
+    font-weight: 500;
+}
+.social_links a:hover{
+    opacity: .9;
+}
+.social_links i{
+    font-weight: 600;
+}
+.social_links #fb{
+    color: #0000ff;
+}
+.social_links #ig{
+    color: #E1306C;
+}
+.social_links #pint{
+    color: #ff0000;
+}
+/* HEADER END */
+
+
+
+/* ABOUT START */
+.about_me{
+    display: flex;
+    align-items: center;
+    padding: 3rem 3%;
+    gap: 3rem;
+    /* background: var(--color4); */
+}
+
+.about_me img{
+    width: 30rem;
+    border-radius: .5rem;
+}
+.about_me p{
+    margin-bottom: 3rem;
+    color: var(--color2);
+}
+.about_me .btn{
+    padding: 1.2rem 2rem;
+    color: var(--color2);
+    background: var(--color1);
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 1.5rem;
+    transition: all .3s ease-in-out;
+}
+.about_me .btn:hover{
+    padding: 1.4rem 2.2rem;
+}
+/* ABOUT END */
+
+
+
+/* WORK START */
+.work{
+    /* text-align: center; */
+    background: radial-gradient(#000000b3, #00000080), url(../imgs/work-bg.jpeg) center/cover no-repeat fixed;
+    color: #fff;
+    padding: 3rem 3%;
+    display: grid;
+}
+
+.work .container{
+    width: 100%;
+}
+
+.work .title{
+    margin-bottom: 4rem;
+}
+.work .title::after{
+    background-color: var(--color4);
+}
+
+.work ul{
+    list-style: inside;
+    list-style-type: square;
+}
+.work ul li{
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.work .work_bottom{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.work .work_bottom > div .icon img{
+    width: 5.5rem;
+    margin: 0 auto 1.5rem auto;
+}
+.work .work_bottom h3{
+    font-weight: 600;
+}
+/* WORK END */
+
+
+
+/* IMAGE GALLERY START */
+.image_gallery{
+    padding: 3rem 3%;
+}
+
+.image_gallery .title, h2{
+    margin-bottom: 5rem;
+}
+
+.image_gallery .portfolio > div{
+    height: 300px;
+    overflow: hidden;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.image_gallery .portfolio > div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.image_gallery .portfolio > div:hover{
+    padding: .9rem;
+}
+.image_gallery .portfolio{
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 2rem;
+}
+/* IMAGE GALLERY END */
+
+
+
+/* CONTACT ME START */
+.contact{
+    background-color: var(--color3);
+    color: var(--color4);
+}
+
+.contact .title{
+    margin: 4rem 0;
+}
+.contact .title::after{
+    background-color: var(--color4);
+}
+
+.contact_content{
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+.contact_left{
+    margin-bottom: 2.5rem;
+    width: 100%;
+}
+.contact_left .lead{
+    padding: .5rem;
+}
+.contact_left form{
+    margin-top: 1.5rem;
+}
+.contact_left form .input, .message{
+    display: block;
+    margin: 1.5rem 0;
+    border: 2px solid var(--color2);
+    padding: 1rem;
+    width: 100%;
+}
+.contact_left form .message{
+    resize: none;
+    font-size: 1.5rem;
+}
+.contact_left form .input, .message::placeholder{
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+.contact_left .btn{
+    padding: 1.2rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color3);
+    background: var(--color1);
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: 1.5px solid var(--color1);
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+.contact_left .btn:hover{
+    background: transparent;
+    color: var(--color1);
+    box-shadow: 0 0 10px var(--color1);
+}
+
+.contact_right img{
+    width: 550px;
+    height: 500px;
+    border-radius: 15px;
+}
+/* CONTACT ME END */
+
+
+
+/* FOOTER START */
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 3rem 3%;
+    background: #222;
+}
+
+.footer ul{
+    list-style: none;
+    align-items: center;
+    text-align: center;
+}
+
+.footer .social_links i{
+    font-size: 1.8rem;
+    border-radius: 50%;
+}
+
+.footer .nav a{
+    color: #eee;
+    font-family: 'Poppins';
+}
+.footer .nav a:hover{
+    border-bottom: 2px solid var(--color4);
+}
+
+.footer .nav{
+    display: flex;
+    gap: 2.5rem;
+    margin: 2.5rem 0;
+}
+
+.footer p{
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    color: #eee;
+}
+/* FOOTER END */

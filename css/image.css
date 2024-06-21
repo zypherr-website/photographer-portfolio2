@@ -1,0 +1,31 @@
+@import url(./style.css);
+
+.container .popup_image{
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 369;
+    display: none;
+}
+
+.container .popup_image span{
+    position: absolute;
+    top: 0; right: 10px;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 369;
+}
+
+.container .popup_image img{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    max-height: 500px;
+    width: 750px;
+    object-fit: cover;
+}
